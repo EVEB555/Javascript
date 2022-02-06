@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Title</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>	
+	</style>
+
+</head>
+<body id="body">	
+	
+	<script>
+        function cElement(number, number2) {
+            let top = '<p>Pop it</p>';
+            let middle = '<p>' + number2 + '</p>';
+            let bottom = '<p>Drop it</p>';
+            let boxID = 'box' + number;
+            let fullBox = '<div id="'+ boxID + '">' + top + middle + bottom + '</div>';
+            document.getElementById("body").innerHTML += fullBox;
+        }
+
+        cElement(1, 11);
+        cElement(2, 8);
+        cElement(3, 14);
+        cElement(4, 17);
+
+        function styleBox(a) {
+            let boxStyle = document.getElementById(a).style;
+            boxStyle.margin = "15px 10px 20px 10px";
+            boxStyle.border = "thin solid red";
+            boxStyle.width = "70px";
+            boxStyle.borderRadius = "5px";  
+            boxStyle.backgroundColor = "gray";
+            boxStyle.color = "red";
+        }
+
+        styleBox("box1");
+        styleBox("box2");
+        styleBox("box3");
+        styleBox("box4");
+
+	</script>
+</body>
+</html>
