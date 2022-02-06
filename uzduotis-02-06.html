@@ -12,22 +12,47 @@
 	<div id="container1">
 	</div>
 	<script>
-        /*1*/
+        /*1užd*/
         function myFirstFunction(text) {
             console.log(text);
         }
 
         myFirstFunction("Labas rytas")
 
-        /*2,3*/
+        /*2,3užd*/
       
-       function mySeconFunction(a, b, c) {
+       function mySecondFunction(a, b, c) {
             console.log (a + b + c);
             return (a + b + c);
         }
 
         mySecondFunction(5, 6, 3);
+
+
+        /*KITA (ifs)*/ 
+
+        function myThirdFunction (number) {
+            if(number >= 10) {
+                if(number <= 99) {
+                    console.log("Number " + number + " is between 10 and 99");
+                }
+            }
+        }
+
+        myThirdFunction(9);
+        myThirdFunction(52);
+
+        function myFourthFunction(number) {
+            if (number >= 10 && number <= 99) {
+                console.log("Number " + number + " is between 10 and 99");
+            } else {
+                console.log("Number " + number + " is below 10 or at least 100");
+            }
+        }
         
+        myFourthFunction(13);
+        myFourthFunction(120);
+
 	</script>
 </body>
 </html>
