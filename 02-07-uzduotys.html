@@ -126,8 +126,88 @@
         astuntaUzduotis(4);
 
         function devintaUzduotis(p1, p2, p3) {
-            if()
+            if (p1 > p2 && p1 > p3) {
+                console.log("Pirmas gavo geriausią pažymį");
+            }
+            else if (p2 > p1 && p2 > p3) {
+            console.log("Antras gavo geriausią pažymį");
+            }  
+            else {
+                console.log("Trečias gavo geriausią pažymį");
+            }
         }
+
+        devintaUzduotis(5, 8, 9);
+        devintaUzduotis(8, 6, 3);
+
+        function desimtaUzduotis(n) {
+            if (n == 1 || n == 3 || n == 5 || n == 7 || n == 8 || n == 10 || n == 12) {
+                console.log("d=31");
+            } else if (n == 2) {
+                console.log("d=28");
+            } else {
+                console.log("d=30");
+            }
+        }
+
+        desimtaUzduotis(5);
+        desimtaUzduotis(4);
+        desimtaUzduotis(2);
+
+        function vienuoliktaUzduotis(v1, m1, m2, v, m) {
+            if (v1 <= v) {
+                if ((v*60) + m >= (v1*60) + m1 + m2) {
+                    console.log("Petras į pamoką spėja");
+                } else {
+                    console.log("Petras į pamoką nespėja");
+                }
+            } 
+        }
+
+        vienuoliktaUzduotis(8, 29, 43, 9, 5);
+        vienuoliktaUzduotis(8, 29, 23, 9, 5);
+
+        function dvyliktaUzduotis(n) {
+            if(n % 3 === 0) {
+                console.log("Trikampį sudėlioti galima");
+            } else {
+                console.log("Trikampį sudėlioti negalima");
+            }
+        }
+
+        dvyliktaUzduotis(6);
+        dvyliktaUzduotis(4);
+
+        function tryliktaUzduotis(m) {
+            let x = (m - 1896) / 4;
+            if(Number.isInteger(x)) {
+                console.log("n = " + (x + 1));
+            } else {
+                console.log("Metai neolimpiniai");
+            }
+        }
+
+        tryliktaUzduotis(1904);
+        tryliktaUzduotis(2005);
+        tryliktaUzduotis(1896);
+
+        function keturioliktaUzduotis(a, b, c) {
+            D = b*b - 4*a*c;
+            if(D == 0) {
+                x = -1*(b/2*a);
+                console.log("Vienas sprendinys ", x);
+            } else if(D > 0) {
+                x1 = (-1*b + Math.sqrt(D)) / (2*a);
+                x2 = (-b - Math.sqrt(D)) / (2*a);
+                console.log("Du sprendiniai ", x1, x2);
+            } else {
+                console.log("Nėra sprendinių");
+            }
+        }
+
+        keturioliktaUzduotis(1, 2, 1);
+        keturioliktaUzduotis(1, 4, 3);
+        keturioliktaUzduotis(1, 3, 4);
 
 	</script>
 </body>
