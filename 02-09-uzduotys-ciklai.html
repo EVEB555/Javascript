@@ -23,16 +23,40 @@
 
     /*2*/
 
-    let a = -20;
-    let b = 50;
+    let a = -10;
+    let b = -2;
     let sum = 0;
-    while (a <= b) {
+    sumNegativ = 0;
+    sumPositiv = 0;
+
+    if (a > b) {
+            console.log("Value invalid");
+    }
+
+    while (a < b + 1) {
         console.log(a);
         sum += a;
+        if (a < 0) {
+          sumNegativ += a;
+      } else if (a > 0) {
+        sumPositiv += a;
+      }
         a = a + 1;
-
     }
-    console.log(sum);
+
+    console.log("Bendra ciklo skaitmenų suma yra " + sum);
+    console.log("Negatyvių skaičių suma yra " + sumNegativ);
+    console.log("Teigiamų skaičių suma yra " + sumPositiv);
+
+    if (sumNegativ * -1 < sumPositiv) {
+      console.log("Neigiamų skaičių suma yra mažesnė už teigiamų");
+    } else if (sumNegativ * -1 > sumPositiv) {
+      console.log("Neigiamų skaičių suma yra didesnė už teigiamų");
+    } else {
+      console.log("Teigiamų ir neigiamų skaičių sumos yra vienodos");
+    }
+    
+
 
 	</script>
 </body>
