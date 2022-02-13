@@ -9,6 +9,10 @@
 
 </head>
 <body id="body">	
+  <!---<div id="myDiv">
+    <h1>Heading</h1>
+    <p>Nulla dui lacus, pretium eget libero ac, mattis malesuada neque. Cras hendrerit dictum massa at lobortis. Morbi nec turpis et mi scelerisque euismod. Curabitur dui sem, vulputate eget nisi in, tincidunt pulvinar magna. Maecenas id eros a lorem elementum dapibus at a ex. </p>
+  </div>--->  
 
 	<script>
       /*1 -  Parašyti ciklą, kuris į konsolę atspausdina skaičius nuo 10 iki 1000, kurie dalinasi arba iš 3, arba iš 7 (arba iš abiejų)*/
@@ -21,7 +25,7 @@
       x = x + 1;
     }*/
 
-    /*2 -Duotos reikšmės a ir b (jų reikšmes turi būti galima keisti kode, eg. -20 ir 50). Patikrinti ar a < b, jei ne - atspausdinti kokį nors pranešimą konsolėje. Jeigu taip - susumuoti visus teigiamus ir atskirai visus neigiamus skaičius iš intervalo nuo a iki b imtinai, atspausdinti abi sumas, ir palyginti kuri didesnė, t.y. vienu atveju parašyti kad teigiamų, kitu atveju - kad neigiamų suma didesnė*/
+    /*2 -Duotos reikšmės a ir b (jų reikšmes turi būti galima keisti kode, eg. -20 ir 50). Patikrinti ar a < b, jei ne - atspausdinti kokį nors pranešimą konsolėje. Jeigu taip - susumuoti visus teigiamus ir atskirai visus neigiamus skaičius iš intervalo nuo a iki b imtinai, atspausdinti abi sumas, ir palyginti kuri didesnė, t.y. vienu atveju parašyti kad teigiamų, kitu atveju - kad neigiamų suma didesnė
 
     let a = -20;
     let b = 50;
@@ -54,9 +58,29 @@
       console.log("Neigiamų skaičių suma yra didesnė už teigiamų");
     } else {
       console.log("Teigiamų ir neigiamų skaičių sumos yra vienodos");
+    } */
+    
+    /*3 - Duotas skaičius k (turi būti galima lengvai jį keisti), bei gali būti duoti papildomi parametrai, nusakantys stilių (pvz. spalva, tarpų dydis ir pan.). Parašyti skriptą, kuris į HTML puslapį įkelia k div'ų, kurių viduje yra antraštė ir pastraipa; div'ai visi identiški, bet jų parametrai (rėmeliai, spalvos ar pan.) turi būti keičiami keičiant kintamųjų reikšmes (kokie ir kiek - renkatės patys)*/
+
+    
+    /*let elem = document.getElementById("myDiv").innerHTML;*/
+
+    let text = "<div id='myDiv'> <h1>Heading</h1> <p>Nulla dui lacus, pretium eget libero ac, mattis malesuada neque. Cras hendrerit dictum massa at lobortis. Morbi nec turpis et mi scelerisque euismod. Curabitur dui sem, vulputate eget nisi in, tincidunt pulvinar magna. Maecenas id eros a lorem elementum dapibus at a ex. </p> </div>";
+
+    document.getElementById("body").innerHTML = "";
+   
+    let k = 1;
+
+    while (k <= 5) {
+      document.getElementById("body").innerHTML += text;
+      k++;
     }
+ 
+    
+   
     
 
+    
 
 	</script>
 </body>
