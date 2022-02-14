@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Title</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>	
+	</style>
+
+</head>
+<body id="body">	
+    <script>
+        /* 1 - Sugeneruokite masyvą iš 30 elementų (indeksai nuo 0 iki 29), kurių reikšmės yra 
+        atsitiktiniai skaičiai nuo 5 iki 25. */
+
+
+            function atsitiktinis (min, max) {
+                return Math.floor(Math.random()*(max-min+1)+min)
+            }
+
+            for (let i = 0; i < 50; i++) {
+            // console.log(atsitiktinis (5, 25));
+            }
+
+            let masyvas = [];
+
+            for (let i = 0; i < 30; i++) {
+                masyvas[i] = (atsitiktinis (5, 25));
+            }
+
+            //console.log(masyvas);
+
+
+        /* 2 -  Naudodamiesi 1 uždavinio masyvu: 
+
+            a.  Suskaičiuokite kiek masyve yra reikšmių didesnių už 10; */
+
+
+                let lenght = 0;
+
+                for (let i = 0; i < 30; i++) {
+                masyvas[i] = (atsitiktinis (5, 25));
+                    if (masyvas[i] > 10) {
+                        lenght++;
+                    }
+                }
+
+                console.log(masyvas);
+                //console.log(lenght);
+
+
+            /* b.  Raskite didžiausią masyvo reikšmę ir jos indeksą arba indeksus jeigu yra keli; */
+
+
+                let max = masyvas[0];
+                let maxIndex = [];
+
+                for (let i = 1; i < masyvas.length; i++) {
+                    if (masyvas[i] > max) {
+                        max = masyvas[i];
+                    }
+
+                }
+
+                console.log(max);
+
+                for (let i = 0; i < masyvas.length; i++) {
+                    if (max == masyvas[i]) {
+                        maxIndex.push(i);
+                    }
+
+                }
+
+                console.log(maxIndex);
+
+
+                
+            /*c.  Suskaičiuokite visų porinių (lyginių) indeksų reikšmių sumą;*/ 
+            
+                let sumPoriniai = 0;
+               
+                for (let i = 0; i < 30; i++) {
+                    if (i % 2 === 0) {
+                        sumPoriniai += masyvas[i];
+                    }
+
+                }
+                console.log(masyvas);
+                console.log(sumPoriniai);
+
+            /*d.  Sukurkite naują masyvą, kurio reikšmės yra 1 uždavinio masyvo reikšmes minus tos 
+            reikšmės indeksas; 
+            e.  Papildykite masyvą papildomais 10 elementų su reikšmėmis nuo 5 iki 25, kad 
+            bendras masyvas padidėtų iki indekso 39; 
+            f.  Iš masyvo elementų sukurkite du naujus masyvus. Vienas turi būti sudarytas iš 
+            neporinių indekso reikšmių, o kitas iš porinių; 
+            g.  Pirminio masyvo elementus su poriniais indeksais padarykite lygius 0 jeigu jie 
+            didesni už 15; 
+            h.  Suraskite pirmą (mažiausią) indeksą, kurio elemento reikšmė didesnė už 10; */
+
+        
+	</script>
+</body>
+</html>
