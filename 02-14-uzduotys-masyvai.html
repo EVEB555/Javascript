@@ -19,7 +19,7 @@
             }
 
             for (let i = 0; i < 50; i++) {
-            // console.log(atsitiktinis (5, 25));
+                //console.log(atsitiktinis (5, 25));
             }
 
             let masyvas = [];
@@ -28,7 +28,7 @@
                 masyvas[i] = (atsitiktinis (5, 25));
             }
 
-            //console.log(masyvas);
+            console.log(masyvas);
 
 
         /* 2 -  Naudodamiesi 1 uždavinio masyvu: 
@@ -46,7 +46,7 @@
                 }
 
                 console.log(masyvas);
-                //console.log(lenght);
+                console.log(lenght);
 
 
             /* b.  Raskite didžiausią masyvo reikšmę ir jos indeksą arba indeksus jeigu yra keli; */
@@ -89,14 +89,64 @@
                 console.log(sumPoriniai);
 
             /*d.  Sukurkite naują masyvą, kurio reikšmės yra 1 uždavinio masyvo reikšmes minus tos 
-            reikšmės indeksas; 
-            e.  Papildykite masyvą papildomais 10 elementų su reikšmėmis nuo 5 iki 25, kad 
-            bendras masyvas padidėtų iki indekso 39; 
-            f.  Iš masyvo elementų sukurkite du naujus masyvus. Vienas turi būti sudarytas iš 
-            neporinių indekso reikšmių, o kitas iš porinių; 
-            g.  Pirminio masyvo elementus su poriniais indeksais padarykite lygius 0 jeigu jie 
-            didesni už 15; 
-            h.  Suraskite pirmą (mažiausią) indeksą, kurio elemento reikšmė didesnė už 10; */
+            reikšmės indeksas; */
+
+                           
+                let masyvas2 = [];
+
+                for(let i = 0; i < masyvas.length; i++) {
+                        masyvas2.push(masyvas[i] - i);
+                }
+
+                console.log(masyvas);
+                console.log(masyvas2);
+
+
+            /*e.  Papildykite masyvą papildomais 10 elementų su reikšmėmis nuo 5 iki 25, kad 
+            bendras masyvas padidėtų iki indekso 39; */
+
+                let masyvasPlius= [];
+
+                for(let i = 0; i < masyvas.length + 10; i++) {
+                        masyvasPlius.push(atsitiktinis (5, 25));
+                }
+               
+                console.log(masyvasPlius);
+
+            /* f.  Iš masyvo elementų sukurkite du naujus masyvus. Vienas turi būti sudarytas iš 
+            neporinių indekso reikšmių, o kitas iš porinių; */
+
+                let masyvasPoriniai = [];
+                let masyvasNeporiniai = [];
+
+                for (let i = 0; i < masyvas.length; i++) {
+                    if(i % 2 === 0){
+                        masyvasPoriniai.push(masyvas[i]);
+                    } else {
+                        masyvasNeporiniai.push(masyvas[i]);
+                    }
+                }
+
+                console.log(masyvas);
+                console.log(masyvasPoriniai);
+                console.log(masyvasNeporiniai);
+
+            /*g.  Pirminio masyvo elementus su poriniais indeksais padarykite lygius 0 jeigu jie 
+            didesni už 15; */
+
+              
+                for (let i = 0; i < 30; i++) {
+                    if(masyvas[i] > 15){
+                        masyvasPoriniai[i] = 0;
+                    } else {
+                        masyvasPoriniai[i] = masyvas[i];
+                    }
+                }
+
+                console.log(masyvas);
+                console.log(masyvasPoriniai);
+
+            /*h.  Suraskite pirmą (mažiausią) indeksą, kurio elemento reikšmė didesnė už 10; */
 
         
 	</script>
