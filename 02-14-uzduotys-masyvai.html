@@ -135,7 +135,7 @@
             didesni už 15; */
 
               
-                for (let i = 0; i < 30; i++) {
+               /* for (let i = 0; i < 30; i++) {
                     if(masyvas[i] > 15){
                         masyvasPoriniai[i] = 0;
                     } else {
@@ -144,11 +144,24 @@
                 }
 
                 console.log(masyvas);
-                console.log(masyvasPoriniai);
+                console.log(masyvasPoriniai);*/
 
             /*h.  Suraskite pirmą (mažiausią) indeksą, kurio elemento reikšmė didesnė už 10; */
 
-        
+                let firstIndex = 0;
+
+                while(masyvas[firstIndex] < 10 && firstIndex < masyvas.length) {
+                    firstIndex++;
+                }
+
+                console.log(masyvas);
+                console.log(firstIndex);
+
+
+               
+                
+                //console.log(masyvas.indexOf(value));
+                //console.log(minIndex);
 	</script>
 </body>
 </html>
