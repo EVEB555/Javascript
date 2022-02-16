@@ -162,6 +162,108 @@
                 
                 //console.log(masyvas.indexOf(value));
                 //console.log(minIndex);
+
+        /* 3.  Sugeneruokite masyvą, kurio reikšmės atsitiktinės raidės A, B, C ir D, o ilgis 200. 
+        Suskaičiuokite kiek yra kiekvienos raidės. */
+
+
+            array = [];
+            
+            let sumA = 0;
+            let sumB = 0;
+            let sumC = 0;
+            let sumD = 0;
+            
+
+            function randomLetters (min, max) {
+                return Math.floor(Math.random()*(max-min+1)+min)
+            }
+
+            for(i = 0; i < 200; i++){
+                array[i] = String.fromCharCode(randomLetters(65, 68));
+            }
+
+            console.log(array);
+
+            for(i = 0; i < 200; i++){
+                if (array[i] == "A"){
+                    ++sumA;
+                } else if (array[i] == "B"){
+                    ++sumB;
+                } else if (array[i] == "C"){
+                    ++sumC;
+                } else {
+                    ++sumD;
+                }
+
+            }
+
+            console.log("A raidžių suma " + sumA);
+            console.log("B raidžių suma " + sumB);
+            console.log("C raidžių suma " + sumC);
+            console.log("D raidžių suma " + sumD);
+
+        /*4.  Išrūšiuokite 3 uždavinio masyvą pagal abecėlę. */
+
+            /*array.sort();
+
+            console.log(array);
+            
+            OR*/
+
+            for (let i = 0; i < 200; i++) {
+                for (j = 0; j < 200; j++){
+                    if(array[i] < array[j]){
+                        let temp = array[i]; // temp -  temporary variable
+                        array[i] = array[j];
+                        array[j] = temp;
+                    }
+                }
+            }
+            console.log(array);
+
+
+        /* 5.  Sugeneruokite du masyvus, kurių reikšmės yra atsitiktiniai skaičiai nuo 100 iki 999. 
+        Masyvų ilgiai 100. Masyvų reikšmės turi būti unikalios savo masyve (t.y. neturi kartotis). */
+
+            function randomNumbers(min, max) {
+                return Math.floor(Math.random()*(max-min+1)+min)
+            }
+
+            let arrayUnique1 = [];
+            let arrayUnique2 = [];
+
+            while(arrayUnique1.length < 100) {
+                let number = randomNumbers(100, 999);
+                    if(!arrayUnique1.includes(number)) { // inclides - determines whether an array includes a certain value among its entries
+                        arrayUnique1.push(number);
+                    }
+            }
+
+            console.log(arrayUnique1);
+
+            while(arrayUnique2.length < 100) {
+                let number = randomNumbers(100, 999);
+                    if(!arrayUnique2.includes(number)) { 
+                        arrayUnique2.push(number);
+                    }
+            }
+
+            console.log(arrayUnique2);
+
+        /*6.  Sugeneruokite masyvą, kuris būtų sudarytas iš reikšmių, kurios yra pirmame 5 uždavinio 
+        masyve, bet nėra antrame 5 uždavinio masyve.*/
+
+            let arrayUnique3 = [];
+
+            for (i = 0; i < 100; i++) {
+                if(!arrayUnique2.includes(arrayUnique1)) {
+                    arrayUnique3.push(arrayUnique1[i]);
+                }
+            }
+
+            console.log(arrayUnique3);
+
 	</script>
 </body>
 </html>
