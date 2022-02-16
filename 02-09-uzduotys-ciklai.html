@@ -65,23 +65,28 @@
     
     /*let elem = document.getElementById("myDiv").innerHTML;*/
 
-    let text = "<div id='myDiv'> <h1>Heading</h1> <p>Nulla dui lacus, pretium eget libero ac, mattis malesuada neque. Cras hendrerit dictum massa at lobortis. Morbi nec turpis et mi scelerisque euismod. Curabitur dui sem, vulputate eget nisi in, tincidunt pulvinar magna. Maecenas id eros a lorem elementum dapibus at a ex. </p> </div>";
+    let text = "<div class='myDiv'> <h1>Heading</h1> <p>Nulla dui lacus, pretium eget libero ac, mattis malesuada neque. Cras hendrerit dictum massa at lobortis. Morbi nec turpis et mi scelerisque euismod. Curabitur dui sem, vulputate eget nisi in, tincidunt pulvinar magna. Maecenas id eros a lorem elementum dapibus at a ex. </p> </div>";
 
     document.getElementById("body").innerHTML = "";
     
    
-    let k = 1;
+    let k = 5;
+    let j = 0;
     let bColor = "red";
     
+    
 
-    while (k <= 5) {
+    while (j < k) {
       document.getElementById("body").innerHTML += text;
-      k++;
+      j++;
       
     }
- 
     
-   
+    let element = document.getElementsByClassName("myDiv");
+
+    for(let i = 0; i < element.length; ++i){
+      element[i].style.color = "red";
+    }
     
 
     
