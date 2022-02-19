@@ -235,7 +235,7 @@
 
             while(arrayUnique1.length < 100) {
                 let number = randomNumbers(100, 999);
-                    if(!arrayUnique1.includes(number)) { // inclides - determines whether an array includes a certain value among its entries
+                    if(!arrayUnique1.includes(number)) { // includes - determines whether an array includes a certain value among its entries
                         arrayUnique1.push(number);
                     }
             }
@@ -257,12 +257,44 @@
             let arrayUnique3 = [];
 
             for (i = 0; i < 100; i++) {
-                if(!arrayUnique2.includes(arrayUnique1)) {
+                if(!arrayUnique2.includes(arrayUnique1[i])) {
                     arrayUnique3.push(arrayUnique1[i]);
                 }
             }
 
             console.log(arrayUnique3);
+
+        /*7.  Sugeneruokite masyvą iš elementų, kurie kartojasi abiejuose 5 uždavinio masyvuose. */
+
+            let arrayUnique4 = [];
+
+            //let result = arrayUnique1.filter(val => arrayUnique2.includes(val)); - Checks the matched element between two array
+            
+            for (i = 0; i < 100; i++) {
+                if(arrayUnique2.includes(arrayUnique1[i])) {
+                    arrayUnique4.push(arrayUnique1[i]);
+                }
+            }
+        
+
+            //console.log(result);
+            console.log(arrayUnique4);
+
+
+        /*8.  Sugeneruokite 10 skaičių masyvą pagal taisyklę: Du pirmi skaičiai- atsitiktiniai nuo 5 iki 25. Trečias, pirmo ir antro suma. Ketvirtas- antro ir trečio suma. Penktas trečio ir ketvirto suma ir t.t. */
+
+            let arrayRules = [];
+
+            
+            for (i = 0; i < 10; i++) {
+                if(i < 2) {
+                    arrayRules.push(randomNumbers(5, 25));
+                } else {
+                    arrayRules[i] = arrayRules [i - 1] + arrayRules[i - 2];
+                }
+            }
+        
+            console.log(arrayRules);
 
 	</script>
 </body>
