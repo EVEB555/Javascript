@@ -56,9 +56,79 @@
 
         
         /*b.  Raskite didžiausio elemento reikšmę; */
+ 
+            let max = array10[0][0];
+
+            for (let i = 1; i < array10.length; i++) {
+                for (let j = 1; j < array10[i].length; j++){
+                    if (array10[i][j] > max) {
+                        max = array10[i][j];
+                    }
+                } 
+               
+            }
+
+            console.log(array10);
+            console.log(max);
 
         /*c.  Suskaičiuokite kiekvieno antro lygio masyvų su vienodais indeksais sumas (t.y. 
         suma reikšmių turinčių indeksą 0, 1 ir t.t.) */
+
+            /*let sum = 0;
+            let sum1 = 0;
+            let sum2 = 0;
+            let sum3 = 0;
+            let sum4 = 0;
+    
+
+            for (let i = 0; i < array10.length; i++) {
+                for (let j = 0; j < array10[i].length; j++){
+                    if(j == 0){
+                    sum += array10[i][j];
+                    } else if(j == 1){
+                    sum1 += array10[i][j];
+                    } else if(j == 2){
+                    sum2 += array10[i][j];
+                    } else if(j == 3){
+                    sum3 += array10[i][j];
+                    } else {
+                    sum4 += array10[i][j];
+                    }
+                }
+            }
+
+            console.log(sum);
+            console.log(sum1);
+            console.log(sum2);
+            console.log(sum3);
+            console.log(sum4);*/
+
+        /* let results = [];
+
+            for (let i = 0; i < array10.length; i++) {
+                    for (let j = 0; j < array10[i].length; j++){
+                        j == results.length ? results.push(array10[i][j]) : results[j]+=array10[i][j]; 
+                        
+                        /* The conditional (ternary) operator is the only JavaScript operator that takes three operands: a condition followed by a question mark ( ? ), then an expression to execute if the condition is truthy followed by a colon ( : ), and finally the expression to execute if the condition is falsy.
+                    }
+                }
+
+            console.log(results);*/
+        
+            let results = [];
+
+            for (let i = 0; i < array10.length; i++) {
+                for (let j = 0; j < array10[i].length; j++){
+                    if(j == results.length) {
+                        results.push(array10[i][j]);
+                    } else {
+                        results[j]+=array10[i][j]; 
+                    } 
+                }
+            }
+
+            console.log(results);
+        
 
         /*d.  Visus masyvus “pailginkite” iki 7 elementų */
 
