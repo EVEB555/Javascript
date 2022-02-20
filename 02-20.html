@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Title</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>	
+	</style>
+
+</head>
+<body id="body">	
+    <!---<form action="https://www.w3schools.com/html/html_forms.asp" method="get">--->
+        <input type="text" id="fnameId" name="fnameVal" oninput="doSomething()"><br>
+        <input type="text" id="lnameId" name="lnameVal" onchange="doSomething()"><br>
+        <!---<input type="submit" value="submit"><br>
+      </form> --->
+    <script>
+        function doSomething(){
+            let in1 = document.getElementById("fnameId");
+            let in2 = document.getElementById("lnameId");
+            //in1.value = "Labas";
+            console.log(in1.value, in2.value);
+        }
+
+        doSomething();
+	</script>
+</body>
+</html>
