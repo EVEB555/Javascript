@@ -132,10 +132,40 @@
 
         /*d.  Visus masyvus “pailginkite” iki 7 elementų */
 
+
+
+            for (let i = 0; i < array10.length; i++) {
+                for (let j = 0; j < array5.length +2; j++){
+                    array10[i].push(random (5, 25));
+                }
+            }
+
+            console.log(array10);
+
         /*e.  Suskaičiuokite kiekvieno iš antro lygio masyvų elementų sumą atskirai ir sumas 
         panaudokite kaip reikšmes sukuriant naują masyvą. T.y. pirma naujo masyvo 
         reikšmė turi būti lygi mažesnio masyvo, turinčio indeksą 0 dideliame masyve, 
         visų elementų sumai */
+
+            
+     
+            let sum = [];
+
+            for (let i = 0; i < array10.length; i++) {
+                for (let j = 0; j < array10[i].length; j++) { 
+                    if(j == 0) {
+                        sum.push(array10[i][j]);
+                    } else {
+                        sum[i]+=array10[i][j]; 
+                    } 
+
+                }
+            }    
+
+            /*kai j yra 0, reikšmę pushiną į sum masyvą, kuomet j != 0, prie sum jau esančios reikšmės [i] prideda sekančią reikšmę. Apsisukus ciklui, j vėl tampa 0,*/
+
+            console.log(array10);
+            console.log(sum);
 
     /*3.  Sukurkite masyvą iš 10 elementų. Kiekvienas masyvo elementas turi būti masyvas su 
     atsitiktiniu kiekiu nuo 2 iki 20 elementų. Elementų reikšmės atsitiktinai parinktos raidės 
